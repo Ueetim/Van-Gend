@@ -28,7 +28,7 @@ aside {
     height: 100vh;
     width: 70px;
     box-shadow: -2px 0 10px #0000001c;
-    z-index: 100;
+    z-index: 1;
 }
 
 aside .social-links {
@@ -47,8 +47,26 @@ aside button {
     background-color: transparent;
     position: absolute;
     top: 30px;
-    font-size: 20px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+aside button span {
+    display: block;
+    height: 2px;
+    margin: 3px 0;
+    width: 25px;
+    background-color: var(--grey);
+}
+
+aside button span:nth-last-child(2) {
+    width: 20px;
+}
+
+aside button span:nth-last-child(1) {
+    width: 15px;
 }
 
 /* SIDEBAR ENDS */
@@ -63,6 +81,7 @@ nav {
     width: 80%;
     background-color: #fff;
     position: absolute;
+    z-index: 1000;
     top: 0;
 }
 
@@ -70,6 +89,12 @@ nav a {
     text-decoration: none;
     color: grey;
     padding: 0 50px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #000;
+    transition: .3s;
 }
 
 nav .logo {
@@ -121,6 +146,17 @@ nav .logo {
     cursor: pointer;
 }
 
+.hero-txt button span {
+    font-size: 0.8rem;
+    display: inline-block;
+    transition: .3s;
+}
+
+.hero-txt button:hover > span {
+    transform: rotate(405deg);
+    transition: .3s;
+}
+
 .hero-img {
     background-image: url(images/hero.png);
     width: 100%;
@@ -130,7 +166,7 @@ nav .logo {
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 800;
+    z-index: 900;
     display: flex;
 }
 
