@@ -69,16 +69,15 @@ linkArray.forEach((linkItem) => {
 });
 
 function fetchPage(link, page) {
-  // let baseURL = `${window.location.protocol}//${window.location.hostname}`;
+  let baseURL = `${window.location.protocol}//${window.location.hostname}`;
 
-  let baseURL = window.location.href;
+  // let baseURL = window.location.href;
   if (window.location.port) {
     baseURL += `:${window.location.port}`;
   }
 
-  baseURL = baseURL.replace(window.location.pathname, `/${page}`)
-  // fetch(`${baseURL}/${page}`)
-  fetch(baseURL)
+  fetch(`${baseURL}/${page}`)
+  // fetch(baseURL)
     .then((response) => {
       return response.text();
     })
