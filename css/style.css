@@ -13,8 +13,64 @@
 body {
     height: 100vh;
     font-size: 16px;
-    /* overflow: hidden; */
+    overflow: hidden;
+    max-width: 2000px;
+    position: relative;
+    margin: auto;
 }
+
+/* NAV */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 80%;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    display: flex;
+    color: grey;
+    padding: 0 50px;
+    transition: .3s;
+}
+
+.nav a span {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a:hover {
+    color: #000;
+    transition: .3s;
+}
+
+nav .logo {
+    background-color: var(--grey);
+    height: 100%;
+    width: 120px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    nav a {
+        display: none !important;
+    }
+}
+
+
+/* NAV ENDS */
 
 /* SIDEBAR */
 
@@ -82,54 +138,42 @@ aside button span:nth-last-child(1) {
     width: 15px;
 }
 
+aside .nav {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    aside .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        position: absolute;
+        top: 0;
+        right: 70px;
+        z-index: 1000;
+        background-color: #fff;
+        /* min-width: 200px; */
+        width: 0;
+        overflow: hidden;
+        visibility: hidden;
+        height: 100vh;
+    }
+
+    aside .nav a {
+        display: flex;
+    }
+
+    .show-nav {
+        /* width: 200px;
+        min-width: 200px;
+        visibility: visible; */
+        background-color: red;
+    }
+}
+
 /* SIDEBAR ENDS */
 
-/* NAV */
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    width: 80%;
-    background-color: #fff;
-    position: absolute;
-    z-index: 1000;
-    top: 0;
-}
-
-nav a {
-    text-decoration: none;
-    display: flex;
-    color: grey;
-    padding: 0 50px;
-    transition: .3s;
-}
-
-nav a span {
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-
-nav a:hover {
-    color: #000;
-    transition: .3s;
-}
-
-nav .logo {
-    background-color: var(--grey);
-    height: 100%;
-    width: 120px;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-}
-
-
-/* NAV ENDS */
 
 /* HERO PAGE */
 

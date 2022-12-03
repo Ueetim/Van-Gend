@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let navLinks = document.querySelectorAll('nav a, .social-links a');
+    let navLinks = document.querySelectorAll('.nav a, .social-links a');
 
     // navlinks hover
     navLinks.forEach((navLink) => {
