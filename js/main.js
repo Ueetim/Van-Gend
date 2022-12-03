@@ -12,6 +12,15 @@ navBtn.addEventListener("click", () => {
     navList.style.visibility = "visible";
     navList.style.transition = ".3s ease-in";
     open = true;
+
+    anime({
+      targets: "aside .nav a",
+      translateX: [600, 0],
+      delay: (el, i) => 50 * i,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+    });
+
   } else {
     navList.style.width = "0";
     navList.style.visibility = "hidden";

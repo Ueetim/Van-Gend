@@ -69,6 +69,12 @@ nav .logo {
     }
 }
 
+@media (max-width: 650px) {
+    nav {
+        display: none !important;
+    }
+}
+
 
 /* NAV ENDS */
 
@@ -227,6 +233,38 @@ aside .nav {
     transition: .3s;
 }
 
+@media (max-width: 650px) {
+    .hero-txt {
+        padding: 0 20px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .hero-txt h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    
+    .hero-txt .info {
+        color: #edecec;
+        padding: 15px 0;
+    }
+    
+    .hero-txt button {
+        color: #fff;
+        font-size: 0.9rem;
+        margin: 0 auto;
+    }
+    
+    .hero-txt button span {
+        font-size: 0.8rem;
+        display: inline-block;
+        transition: .3s;
+    }
+}
+
 .hero-img {
     /* background-image: url(../images/hero.png); */
     /* background-size: cover; */
@@ -269,6 +307,22 @@ aside .nav {
     }
     100% {
         transform: translateX(-300%);
+    }
+}
+
+@media (max-width: 650px) {
+    .hero-img {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .hero-img img {
+        opacity: 0.5;
     }
 }
 
@@ -335,6 +389,12 @@ aside .nav {
 .slider-con .slide-num::before {
     content: "01";
     animation: slideNum 15s ease-in infinite;
+}
+
+@media (max-width: 650px) {
+    .hero-footer {
+        display: none;
+    }
 }
 
 @keyframes slideNum {
