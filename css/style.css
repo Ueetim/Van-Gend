@@ -13,7 +13,7 @@
 body {
     height: 100vh;
     font-size: 16px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* SIDEBAR */
@@ -179,9 +179,48 @@ nav .logo {
 }
 
 .hero-img {
-    background-image: url(../images/hero.png);
-    background-size: cover;
+    /* background-image: url(../images/hero.png); */
+    /* background-size: cover; */
     width: 100%;
+    overflow: hidden;
+}
+
+.hero-img > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    animation: changeImage 15s ease-in infinite;
+}
+
+.hero-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes changeImage {
+    0% {
+        transform: translateX(0%);
+    }
+    30% {
+        transform: translateX(0%);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    63% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    96% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
 }
 
 .carousel-btns {
@@ -244,6 +283,35 @@ nav .logo {
     font-size: 50px;
 }
 
+.slider-con .slide-num::before {
+    content: "01";
+    animation: slideNum 15s ease-in infinite;
+}
+
+@keyframes slideNum {
+    0% {
+        content: "01";
+    }
+    30% {
+        content: "01";
+    }
+    33% {
+        content: "02";
+    }
+    63% {
+        content: "02";
+    }
+    66% {
+        content: "03";
+    }
+    96% {
+        content: "03";
+    }
+    100% {
+        content: "01";
+    }
+}
+
 .slide-num + span {
     display: block;
     width: 100%;
@@ -253,9 +321,22 @@ nav .logo {
 
 .slide-num + span > span {
     display: block;
-    width: 40%;
+    /* width: 40%; */
     height: 1px;
     background-color: #fff;
+    animation: loader 5s ease-in infinite;
+}
+
+@keyframes loader {
+    0% {
+        width: 0%;
+    }
+    90% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 /* HERO PAGE ENDS */
